@@ -39,7 +39,6 @@ public class VehicleRegister implements PersistenceInterface {
     }
 
     private void writeToFile(Vehicle vehicle) {
-        System.out.println(vehicle.toString());
         try (BufferedWriter writer = Files.newBufferedWriter((vehicleFile), StandardOpenOption.APPEND)) {
                 String vehicleString = "";
                 vehicleString += vehicle.getRegistrationNumber() + ",";
